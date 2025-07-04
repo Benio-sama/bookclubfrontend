@@ -21,13 +21,28 @@ nav {
   flex-direction: row;
   gap: 10px;
   flex-wrap: wrap;
+  width: 100%;
 }
 
 #card-container {
   width: 300px;
+  max-width: 300px;
   border: 1px solid #c5c5c5;
   padding: 30px;
   border-radius: 10px;
+  flex: 0 0 100%;
+}
+
+@media (min-width: 768px) {
+  #card-container {
+    flex: 0 0 50%;
+  }
+}
+
+@media (min-width: 1024px) {
+  #card-container {
+    flex: 0 0 33.333%;
+  }
 }
 
 #card-image img {
